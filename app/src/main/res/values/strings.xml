@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Blush</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_monumental_habits">WELCOME TO Monumental habits</string>
+    <string name="we_can_help_you_to_be_a_better_version_of_yourself">We can help you to be a better version of yourself.</string>
+    <string name="we_can">we can</string>
+    <string name="help_you">help you</string>
+    <string name="to_be_a_better">to be a better</string>
+    <string name="version_of">version of</string>
+    <string name="yourself">yourself</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="create_new_habit_easily">CREATE NEW HABIT EASILY</string>
+    <string name="keep_track_of_your_progress">KEEP TRACK OF YOUR PROGRESS</string>
+    <string name="get_stated">Get Stated</string>
+    <string name="join_a_supportive_community">JOIN A SUPPORTIVE COMMUNITY</string>
+</resources>
