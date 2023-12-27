@@ -5,6 +5,7 @@
     <color name="purple_brown">#573353</color>
     <color name="gold">#FC9D45</color>
     <color name="orange">#FDA758</color>
+    <color name="light_orange">#FFF6ED</color>
     <color name="transparent">#00000000</color>
     <color name="light_peach">#FFF3E9</color>
 </resources>

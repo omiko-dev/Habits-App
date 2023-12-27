@@ -1,59 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_splash"
-    android:orientation="vertical"
-    tools:context=".LoginFragment">
+    android:background="@color/light_peach"
+    tools:context=".presentation.register.login.LoginFragment">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:gravity="center_horizontal|bottom"
-        android:background="@drawable/bg_gradient_color"
-        android:orientation="vertical">
+        android:background="@drawable/bg_splash"
+        android:scaleType="fitCenter"
+        android:paddingTop="200dp"
+        android:src="@drawable/bg_gradient_color"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAccessibility="no"
+        tools:ignore="VisualLintBounds" />
 
-        <TextView
-            android:layout_width="300sp"
-            android:layout_height="wrap_content"
-            android:text="@string/welcome_to_monumental_habits"
-            android:textAllCaps="true"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            android:textColor="@color/purple_brown"
-            android:textStyle="bold"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="15dp"
-            android:background="@drawable/button_white_shape"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="40dp"
-            android:layout_gravity="bottom"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="15dp"
-            android:background="@drawable/button_white_shape"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="30dp"
-            android:layout_gravity="bottom"/>
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:background="@drawable/bg_top_border_shape">
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="@string/welcome_to_monumental_habits"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/purple_brown"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/acpGoogle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck,TextSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acpGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_white_shape"
+        android:drawableStart="@drawable/ic_google"
+        android:drawablePadding="-60dp"
+        android:paddingStart="30dp"
+        android:text="@string/continue_with_google"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/purple_brown"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlSymmetry,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,VisualLintButtonSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton2"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_white_shape"
+        android:drawableStart="@drawable/ic_facebook"
+        android:paddingStart="15dp"
+        android:drawablePadding="-60dp"
+        android:textAlignment="center"
+        android:text="@string/continue_with_google"
+        android:textSize="16sp"
+        android:textColor="@color/purple_brown"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlSymmetry,VisualLintButtonSize" />
 
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:background="@drawable/bg_top_border_shape"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_brown"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="@string/log_in_with_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/light_peach"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:lines="1"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/field_light_orange_shape"
+        android:drawableStart="@drawable/ic_active_email"
+        android:drawablePadding="20dp"
+        android:hint="@string/email"
+        android:paddingStart="20dp"
+        android:textColor="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        tools:ignore="RtlSymmetry,DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck,TextContrastCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPassword"
+        android:inputType="textPassword"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableStart="@drawable/ic_inactive_lock"
+        android:paddingStart="20dp"
+        android:drawablePadding="20dp"
+        android:hint="@string/password"
+        android:textColor="@color/orange"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/field_light_orange_shape"
+        android:layout_marginHorizontal="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        tools:ignore="RtlSymmetry,VisualLintTextFieldSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:background="@color/transparent"
+        android:text="@string/show"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_brown"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/etPassword"
+        app:layout_constraintEnd_toEndOf="@+id/etPassword"
+        app:layout_constraintTop_toTopOf="@+id/etPassword"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acpStart"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_gold_shape"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/purple_brown"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        tools:ignore="VisualLintButtonSize" />
+
+    <TextView
+        android:id="@+id/forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/acpStart" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="-40dp"
+        android:text="@string/don_t_have_an_account"
+        app:layout_constraintStart_toStartOf="@+id/forgot_pass"
+        app:layout_constraintTop_toBottomOf="@+id/forgot_pass" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:textStyle="bold"
+        android:textColor="@color/purple_brown"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView4"
+        app:layout_constraintStart_toEndOf="@+id/appCompatTextView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
